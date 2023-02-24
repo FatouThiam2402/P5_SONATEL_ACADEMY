@@ -1,3 +1,4 @@
+import datetime
   # date_bon =[]
     # if len(date[2]) == 4:
     #     if date[1] in ["01","03","05","07","08","10","12"] and int(date[0]) <= 31:
@@ -35,34 +36,6 @@ def transformerDate(date):
 # print("__________________")        
 #print(transformerDate(changerFormatDate("23/02/2022")))  
 #  "-".join(d)             
-
-
-
-
-
-for c in date:
-            if c in listeSep:
-                sep=c
-                dateF = date.replace(sep,"-")     
-        dateL = dateF.split("-")
-        if len(dateL) == 3:
-            for i  in range(len(listeMois) -  3):
-                if listeMois[i] == dateL[1]:
-                    dateL[1] = "0"+str(i + 1)
-            for j in  range(9,len(listeMois)):
-                if listeMois[j] == dateL[1]:
-                    dateL[1] =str(j + 1)
-            dateL = "-".join(dateL)                         
-            return dateL
-        else:
-            return False
-
-
-
-
-
-
-
 
 
 
