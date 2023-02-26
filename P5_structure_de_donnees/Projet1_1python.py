@@ -9,6 +9,8 @@ def numeroValide(chaine):
                 if any(c.isdigit()for c in chaine) == True:
                     
                     return True
+                else:
+                    return False    
 
                 
 
@@ -120,7 +122,8 @@ def noteValide(note):
     if matieresNotes[0] == '':
         del matieresNotes[0]
     else:
-        print()    
+        #print()
+        pass    
     listeMat = []
     for elemt in matieresNotes:
         elemtSub = re.sub('[|]',':',elemt)
