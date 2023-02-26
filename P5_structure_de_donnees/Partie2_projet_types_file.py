@@ -87,26 +87,6 @@ def input_file_json(file_json):
   
 
 
-  
-
-# for line in liste_invalide_finale:
-#         xml_data = ""
-#         xml_data+=("""
-#         <Eleve>
-#             <Numero> %s </Numero>
-#             <Nom> %s </Nom>
-#             <Prenom> %s </Prenom>
-#             <Date_de_naissance> %s </Date_de_naissance>
-#             <Classe> %s </Classe>
-#             <Note> %s </Note> 
-#         </Eleve>  
-#         """ %(line[0],line[1],line[2],line[3],line[4],line[5]))                 
-
-# with open("invalideData.xml","w+") as f:
-#     f.write("<?xml version = '1.0' encoding ='ISO-8859-1' standalone ='no' ?>\n <Eleves>")  
-#     f.write(xml_data)
-#     f.write("\n </Eleves>") 
-#****************************************************")
 # fonction qui prend en entrer le fichier de base xml   et retourne deux listes(valide et invalide)
 def input_file_xml(file_xml):
     liste_dict = []

@@ -25,7 +25,8 @@ def prenomValide(prenom):
         else:
             return False    
     else:
-        return False        
+        return False     
+   
 #print(prenomValide("1de"))       
 
 def nomValide(nom):
@@ -217,14 +218,6 @@ def afficherUneInfo(numero,liste_valide,liste_inval,list_note_valides,list_note_
                 print("\t\t",matiere)
             print(60*"-")    
       
-
-
-      
-
-
-
-
-
 #def afficher5premiersDeLaClasse(liste):
 
 
@@ -242,35 +235,31 @@ def afficherUneNote(numero,liste_note_val,liste_note_inval):
     print(53*"-")                
 
 
-# def afficherUneInfo(numero,liste_valide):
-#     print(53*"-")
-#     print ("{:<8} {:<8} {:<10} {:<15} {:<10}".format('| Numéro','Nom','Prenom','Date de naissance','Classe |'))
-#     print(53*"-")
-#     for line in liste_valide:
-#         if line["Numero"] == numero:
-#             print("{:<8} {:<8} {:<10} {:<15} {:<10}".format(line["Numero"], line["Nom"],line["Prenom"], line["Date de naissance"], line["Classe"]))
-#             print(53*"-")
 
-    
-
-
-
+note = '#Math[10.5|15:15] #Francais[17|9|8:13] #Anglais[10,5|9:15] #PC[10|13:11]  #SVT[12|11|16|8:12]  #HG[10:10]'
 #def afficher5premiers():
 def ajouterInfo():
-    numero = input("Donner votre numero")
-    nom = input("Donner Votre nom")
-    prenom = input('Donner Votre prenom')
-    date = input("Donner Votre date")
-    classe = input("Donner votre nom de classe")
-    matiere = input("note des matieres \n Donner le nom de la matiere\n")
-    nbre_devoir = input("Donner votre nombre de devoirs")
+    note=""
+    devoir = []
+    numero = numeroValide(input("Donner votre numero"))
+    nom = prenomValide(input("Donner Votre nom"))
+    prenom = nomValide(input('Donner Votre prenom'))
+    date = changerFormatDate(input("Donner Votre date de naissance"))
+    classe = definirFormatClasse(input("Donner votre nom de classe"))
+    nbr_matieres = input(" Donner le nombre de  matieres\n")
+    while nbr_matieres > 0:
+        matiere = input("Donner le nom de la matiere")
+        note += matiere
+        nbre_devoir = int(input("Donner le nombre de devoir de ",matiere))
+        for i in range(1,nbre_devoir+1):
+            dev =int(input("Donner le devoir N°",i))
+            devoir.append(dev)
+        note += devoir    
+        
 
-    num = numeroValide(numero)
-    nomm = nomValide(nom)
-    prenomm = prenomValide(prenom)
-    datee = changerFormatDate(date)
-    dat = dateValide(datee)
-    classee = definirFormatClasse(classe)
+ 
+   # dat = dateValide(datee)  classeValide
+
 
 
 
