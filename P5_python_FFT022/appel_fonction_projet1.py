@@ -71,7 +71,12 @@ for row in list_note_valides:
     dict_moy_Generale = {"Numero":row["Numero"],"MoyenGeneral":MoyGeneralEtud}
     list_moy_Generale.append(dict_moy_Generale)
     dict_moy_Generale={}
-
+dict_moy_croissant = sorted(dict_moy_Generale , key=lambda d:d['MoyenGeneral'],reverse = True)
+for ligne in dict_moy_croissant:    
+    print(20*"-","voici les moyenne") 
+    print(dict_moy_croissant)
+    print(20*"-","voici les moyenne")
+   
 # list_Moyen_croissant = []
 # list_Moyen_croissant = sorted(list_moy_Generale)
 # for line in list_Moyen_croissant:
@@ -128,7 +133,7 @@ while menu in [1,2,3,4,5]:
     elif menu == 3:
         print("En cours de traitement")   
     elif menu == 4:
-        print("En cours de traitement")
+        ajouterInfo() 
     elif menu == 5:
         print("En cours de traitement")
     else:

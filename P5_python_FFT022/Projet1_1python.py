@@ -115,13 +115,13 @@ def classeValide(cl):
 import re
 
 note = '#Math[10.5|15:15] #Francais[17|9|8:13] #Anglais[10,5|9:15] #PC[10|13:11]  #SVT[12|11|16|8:12]  #HG[10:10]'
-
+#math[12.0: 13.0: 10.0]#pc[13.0: 18.5: 19.75]#
 def noteValide(note):
     matieresNotes = note.split("#")
     if matieresNotes[0] == '':
         del matieresNotes[0]
     else:
-        print()    
+        pass    
     listeMat = []
     for elemt in matieresNotes:
         elemtSub = re.sub('[|]',':',elemt)
@@ -129,6 +129,7 @@ def noteValide(note):
         elemtSub = elemtSub.replace('[',':')
         elemtSub = elemtSub.replace(',','.')
         elemtSub = elemtSub.replace(" ","")
+        elemtSub = elemtSub.replace(';',':')
         elemtSub = elemtSub.split(':')
         del elemtSub[len(elemtSub) -1]
         if elemtSub == "" or elemtSub == " " or len(elemtSub) <= 1:
@@ -241,25 +242,56 @@ note = '#Math[10.5|15:15] #Francais[17|9|8:13] #Anglais[10,5|9:15] #PC[10|13:11]
 def ajouterInfo():
     note=""
     devoir = []
-    numero = numeroValide(input("Donner votre numero"))
-    nom = prenomValide(input("Donner Votre nom"))
-    prenom = nomValide(input('Donner Votre prenom'))
-    date = changerFormatDate(input("Donner Votre date de naissance"))
-    classe = definirFormatClasse(input("Donner votre nom de classe"))
-    nbr_matieres = input(" Donner le nombre de  matieres\n")
+    numero = numeroValide(input("Donner votre numero\n"))
+    if numero == False:
+        print("Le numero est invalide")
+    nom = prenomValide(input("Donner Votre nom\n"))
+    if nom == False:
+        print("Le nom saisi n'est pas correcte car < 2\n")
+    prenom = nomValide(input('Donner Votre prenom\n'))
+    if prenom == False:
+        print("Le prenom saisi n'est pas correcte car < 3\n")
+    forma_date = changerFormatDate(input("Donner Votre date de naissance\n"))
+    if forma_date == False:
+        print("la date est invalide\n ")
+    else:    
+        date = dateValide(forma_date)
+        if date == False:
+            print("La date est incorrecte/n")
+        else:
+            pass    
+    forma_classe = definirFormatClasse(input("Donner votre nom de classe\n"))
+    if forma_classe == False:
+        print("La classe n'existe pas")
+    classe = classeValide(forma_classe)
+    if classe == False:
+        print(" La classe saisi est incorreste\n")
+    nbr_matieres = int(input(" Donner le nombre de  matieres\n"))
     while nbr_matieres > 0:
-        matiere = input("Donner le nom de la matiere")
-        note += matiere
-        nbre_devoir = int(input("Donner le nombre de devoir de ",matiere))
+        matiere = input("Donner le nom de la matiere\n")
+        note += "#"+ matiere
+        nbr_matieres -= 1
+        print("Donner le nombre de devoir de ",matiere)
+        nbre_devoir = int(input())
         for i in range(1,nbre_devoir+1):
-            dev =int(input("Donner le devoir N°",i))
+            print("Donner le devoir N°",i)
+            dev = float(input())
             devoir.append(dev)
-        note += devoir    
-        
-
- 
-   # dat = dateValide(datee)  classeValide
-
+        examen =float(input("Donner la note d'examen\n"))
+        devoir.append(examen)
+        note += str(devoir)
+        devoir =[]
+    note1 = note.replace(',',';')
+    noteF = noteValide(note1)
+    if noteF == False:
+        print("Les notes saisies sont incorrectes\n")
+    else:
+        print(noteF)    
+       
+    if numero == True and nom == True and prenom == True and forma_date != False and date == True and forma_classe != False and classe == True and noteF != False:
+        print("Toutes les informations saisies sont correctes")
+    else:
+        print("Il existe des informations incorrectes\n")    
 
 
 
