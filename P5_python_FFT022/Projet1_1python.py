@@ -1,7 +1,6 @@
 import csv
 import re
 import datetime
-
 def numeroValide(chaine):
     if len(chaine) == 7:
         if chaine.isalnum() == True:

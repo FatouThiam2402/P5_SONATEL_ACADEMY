@@ -2,7 +2,6 @@ import csv
 from Projet1_1python import *
 import sys 
 from pprint import pprint
-
 dict_valide = {}
 dict_invalide = {}
 dict_note_valide = {}
@@ -72,72 +71,44 @@ for row in list_note_valides:
     list_moy_Generale.append(dict_moy_Generale)
     dict_moy_Generale={}
 dict_moy_croissant = sorted(dict_moy_Generale , key=lambda d:d['MoyenGeneral'],reverse = True)
-for ligne in dict_moy_croissant:    
-    print(20*"-","voici les moyenne") 
-    print(dict_moy_croissant)
-    print(20*"-","voici les moyenne")
-   
-# list_Moyen_croissant = []
-# list_Moyen_croissant = sorted(list_moy_Generale)
-# for line in list_Moyen_croissant:
-#     print(line)
-
-
-# list_moy_general = []    
-# for i in range(len(list_moy_Generale)):
-#     max = list_moy_Generale[i]["MoyenGeneral"]
-#     for j in range(i+1,len(list_moy_Generale)):
-#         if list_moy_Generale[j]["MoyenGeneral"] > max:
-#             tmp = max
-#             max = list_moy_Generale[j]["MoyenGeneral"]
-#             list_moy_Generale[j]["MoyenGeneral"] = tmp
-#     list_moy_general.append(max)        
-    
-
-# liste_moy_general_croissant = []
-# for element in list_moy_general:
-#     for line in list_moy_Generale:
-#         if element == line["MoyenGeneral"]:
-#             liste_moy_general_croissant.append(line)
-#             break
-
-# for line in liste_moy_general_croissant:
-#     print(line)            
+for lin in dict_moy_croissant:
+    print(lin)
+           
 
 # essayer d'afficher les invalides par line sans iteration
 # afficherUneInfo("GF34KHS",list_valides,list_invalides,list_note_valides,list_note_invalides)
 
-""" **********************************************************  """
-            # Voici la partie Menu du projet
-""" **********************************************************  """    
+# """ **********************************************************  """
+#             # Voici la partie Menu du projet
+# """ **********************************************************  """    
 
-menu = 1
+# menu = 1
 
-while menu in [1,2,3,4,5]:
-    print(50*"")
-    print(10*" ","Voici le Menu: \n 1• Afficher les informations\n 2•Afficher une information par son Numero\n 3•afficher les cinq premiers par leur moyenne \n 4• Ajouter une Information \n 5• Modifier une information Invalide\n 6•Pour Quitter")
-    print(50*"")
-    menu = int(input())
-    if menu == 1:
-        sous_menu = int(input("choisir entre données valide ou invalide\n 1• Afficher les informations Valides \n 2• Afficher les informations Invalides\n"))
-        if sous_menu == 1:
-            afficherInfoValides(list_valides)
-            afficherNoteValide(list_note_valides)
-        elif sous_menu == 2:
-            print("methode affichage invalide")
-            afficherInfoValides(list_invalides) 
-            afficherNoteValide(list_note_invalides)
-    elif menu == 2:
-        numero =input("Entrer votre numero svp")
-        afficherUneInfo(numero,list_valides,list_invalides,list_note_valides,list_note_invalides)
-    elif menu == 3:
-        print("En cours de traitement")   
-    elif menu == 4:
-        ajouterInfo() 
-    elif menu == 5:
-        print("En cours de traitement")
-    else:
-        exit  
+# while menu in [1,2,3,4,5]:
+#     print(50*"")
+#     print(10*" ","Voici le Menu: \n 1• Afficher les informations\n 2•Afficher une information par son Numero\n 3•afficher les cinq premiers par leur moyenne \n 4• Ajouter une Information \n 5• Modifier une information Invalide\n 6•Pour Quitter")
+#     print(50*"")
+#     menu = int(input())
+#     if menu == 1:
+#         sous_menu = int(input("choisir entre données valide ou invalide\n 1• Afficher les informations Valides \n 2• Afficher les informations Invalides\n"))
+#         if sous_menu == 1:
+#             afficherInfoValides(list_valides)
+#             afficherNoteValide(list_note_valides)
+#         elif sous_menu == 2:
+#             print("methode affichage invalide")
+#             afficherInfoValides(list_invalides) 
+#             afficherNoteValide(list_note_invalides)
+#     elif menu == 2:
+#         numero =input("Entrer votre numero svp")
+#         afficherUneInfo(numero,list_valides,list_invalides,list_note_valides,list_note_invalides)
+#     elif menu == 3:
+#         print("En cours de traitement")   
+#     elif menu == 4:
+#         ajouterInfo() 
+#     elif menu == 5:
+#         print("En cours de traitement")
+#     else:
+#         exit  
 
 
 
