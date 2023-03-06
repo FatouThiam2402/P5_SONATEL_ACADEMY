@@ -88,7 +88,7 @@ def dateValide(date):
     except:
         return False
     return True   
-#print(dateValide(changerFormatDate("22/mars/2003")))
+print("c grave",dateValide(changerFormatDate("28/février/2003")))
 #print("verification",dateValide(changerFormatDate("29/mars/09")))
 
 def definirFormatClasse(classe):
@@ -285,7 +285,7 @@ def ajouterInfo():
     if noteF == False:
         print("Les notes saisies sont incorrectes\n")
     else:
-        print(noteF)    
+       pass   
        
     if numero == True and nom == True and prenom == True and forma_date != False and date == True and forma_classe != False and classe == True and noteF != False:
         print("Toutes les informations saisies sont correctes")

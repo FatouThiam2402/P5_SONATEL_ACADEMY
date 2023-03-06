@@ -18,17 +18,20 @@ for line in data_csv:
     json_array.append(line)
 
 with open('data100code.json','w') as file:
-        jsonString = json.dumps(json_array,indent=4)
+        jsonString = json.dumps(json_array)
         file.write(jsonString)
 
 data_json = open('data100code.json','r')# a enlever
 data_lire = json.load(data_json)
+
+
 
 # convertir le fichier global de csv en xml
 list_data_csv = csv.reader(open("data100code.csv"))     
 xml_array = []
 for row in list_data_csv:
     xml_array.append(row)
+
 def convert_row_csv_en_xml(row):
     return """
     <Eleve>
@@ -86,7 +89,6 @@ def input_file_json(file_json):
     return liste_valide_finale,liste_invalide_finale 
   
 
-
 # fonction qui prend en entrer le fichier de base xml   et retourne deux listes(valide et invalide)
 def input_file_xml(file_xml):
     liste_dict = []
@@ -100,56 +102,59 @@ def input_file_xml(file_xml):
             'Date de naissance' : naiss.text,
             'Classe' : classe.text,
             'Note' : note.text, 
-        })
-    return liste_dict
-
+        })   
+    return liste_dict    
 #### Probleme
-# liste_dict = []    
-# data_xml = open("data100code.xml","r") 
-# liste_dict = input_file_xml(data_xml)
+liste_dict = []    
+data_xml = open("data100code.xml","r") 
+liste_dict =  input_file_xml(data_xml)
 
-# print(10*"*")
-# pprint(liste_dict)
+print(10*"*pppp")
+pprint(liste_dict)
 
-# liste_Valide_tmp = []
-# liste_invalide_tmp = []
-# liste_valide_finale = []
-# liste_invalide_finale = []
+liste_Valide_tmp = []
+liste_invalide_tmp = []
+liste_valide_finale = []
+liste_invalide_finale = []
 
-# for line in liste_dict:
-#     numero = numeroValide(line["Numero"])
-#     nom = nomValide(line["Nom"])
-#     prenom = prenomValide(line["Prénom"])
-#     notee = noteValide(line["Note"])  
-#     date = changerFormatDate(line["Date de naissance"])
-#     if date == False:
-#         continue
-#     else:
-#         dateVal = dateValide(date)  
-#     classe = definirFormatClasse(line["Classe"]) 
-#     if classe == False:
-#         continue
-#     else:
-#         classeValid = classeValide(classe)  
-#     if numero == True and nom == True and prenom == True and date != False and dateVal == True and classe != False and classeValid == True and notee != False:      
-#         liste_Valide_tmp.append(line["Numero"])
-#         liste_Valide_tmp.append(line["Nom"])
-#         liste_Valide_tmp.append(line["Prénom"])
-#         liste_Valide_tmp.append(date)
-#         liste_Valide_tmp.append(classe)
-#         liste_Valide_tmp.append(notee)
-#         liste_valide_finale.append(liste_Valide_tmp)
+for line in liste_dict:
+    numero = numeroValide(line["Numero"])
+    #print(10*"*",numero)
+    nom = nomValide(line["Nom"])
+    prenom = prenomValide(line["Prénom"])
+    notee = noteValide(line["Note"])  
+    date = changerFormatDate(line["Date de naissance"])
+    #print("voir la date",date)
+
+    if date == False:
+        continue
+    else:
+        dateVal = dateValide(date)  
+    classe = definirFormatClasse(line["Classe"]) 
+    if classe == False:
+        continue
+    else:
+        classeValid = classeValide(classe)  
+    if numero == True and nom == True and prenom == True and date != False and dateVal == True and classe != False and classeValid == True and notee != False:      
+        liste_Valide_tmp.append(line["Numero"])
+        liste_Valide_tmp.append(line["Nom"])
+        liste_Valide_tmp.append(line["Prénom"])
+        liste_Valide_tmp.append(date)
+        liste_Valide_tmp.append(classe)
+        liste_Valide_tmp.append(notee)
+        liste_valide_finale.append(liste_Valide_tmp)
         
-#     else:
-#         liste_invalide_tmp.append(line["Numero"])
-#         liste_invalide_tmp.append(line["Nom"])
-#         liste_invalide_tmp.append(line["Prénom"])
-#         liste_invalide_tmp.append(date)
-#         liste_invalide_tmp.append(classe)
-#         liste_invalide_tmp.append(notee)
-#         liste_invalide_finale.append(liste_invalide_tmp)
-#         for row in liste_invalide_finale:
-#             print(row) 
+    else:
+        liste_invalide_tmp.append(line["Numero"])
+        liste_invalide_tmp.append(line["Nom"])
+        liste_invalide_tmp.append(line["Prénom"])
+        liste_invalide_tmp.append(date)
+        liste_invalide_tmp.append(classe)
+        liste_invalide_tmp.append(notee)
+        liste_invalide_finale.append(liste_invalide_tmp)
+print("essayer d'afficher les donnees\n")    
+for row in liste_valide_finale:
+    print(row) 
 #****************************************************
 # fonction qui prend en entrer le fichier de base csv   et retourne deux listes(valide et invalide)
 

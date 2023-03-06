@@ -2,10 +2,8 @@ import csv
 from Projet1_1python import *
 import sys 
 from pprint import pprint
-dict_valide = {}
-dict_invalide = {}
-dict_note_valide = {}
-dict_note_invalide = {}
+dict_note_tmp = dict
+dict_note_tmp = dict
 dict_moy_Generale = {}
 list_valides = []
 list_invalides = []
@@ -51,19 +49,17 @@ for line in data100code:
     # else:
     #     MoyGeneralEtud  = calculMoyenGeneral(notee)  
     # dict = {'Date de naissance':}
+    dict_tmp ={"Numero":line[0],"Nom":line[1],"Prenom":line[2],"Date de naissance":date,"Classe":classe}
+    dict_note_tmp = {"Numero":line[0],"Note":notee}
 
-    if numero == True and nom == True and prenom == True and date != False and dateVal == True and classe != False and classeValid == True and notee != False:
-        dict_valide ={"Numero":line[0],"Nom":line[1],"Prenom":line[2],"Date de naissance":date,"Classe":classe}
-        dict_note_valide = {"Numero":line[0],"Note":notee}
-        list_valides.append(dict_valide)
-        list_note_valides.append(dict_note_valide)
+    if numero == True and nom == True and prenom == True and date != False and dateVal == True and classe != False and classeValid == True and notee != False:  
+        list_valides.append(dict_tmp)
+        list_note_valides.append(dict_note_tmp)
     
 
     else:
-        dict_invalide ={"Numero":line[0],"Nom":line[1],"Prenom":line[2],"Date de naissance":date,"Classe":classe}
-        dict_note_invalide = {"Numero":line[0],"Note":notee}
-        list_invalides.append(dict_invalide)
-        list_note_invalides.append(dict_note_invalide) 
+        list_invalides.append(dict_tmp)
+        list_note_invalides.append(dict_note_tmp) 
 
 for row in list_note_valides:
     MoyGeneralEtud = calculMoyenGeneral(row["Note"])

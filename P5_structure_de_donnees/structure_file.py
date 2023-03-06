@@ -1,4 +1,5 @@
 from Partie2_projet_types_file import *
+
 def choixFileValideInvalide():
     print("***Veuillez choisir le type de fichier en Output*** ")
     valide = int(input("\t\t*** Valide ***\n \n\t\t  1• CSV \n \t\t 2• JSON \n\t\t  3• XML\n "))
@@ -6,7 +7,6 @@ def choixFileValideInvalide():
     return valide,invalide
 
 
-print()
 choix = int(input("\t\t***Veuillez choisir le type de fichier en input***  \n\t\t 1• CSV \n\t\t 2• JSON \n\t\t 3• XML\n"))
 if choix == 1:
     data100code = csv.reader(open("data100code.csv","r")) 

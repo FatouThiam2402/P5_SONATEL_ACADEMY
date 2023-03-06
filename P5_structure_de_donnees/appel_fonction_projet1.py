@@ -72,35 +72,7 @@ for row in list_note_valides:
     list_moy_Generale.append(dict_moy_Generale)
     dict_moy_Generale={}
 
-# list_Moyen_croissant = []
-# list_Moyen_croissant = sorted(list_moy_Generale)
-# for line in list_Moyen_croissant:
-#     print(line)
 
-
-# list_moy_general = []    
-# for i in range(len(list_moy_Generale)):
-#     max = list_moy_Generale[i]["MoyenGeneral"]
-#     for j in range(i+1,len(list_moy_Generale)):
-#         if list_moy_Generale[j]["MoyenGeneral"] > max:
-#             tmp = max
-#             max = list_moy_Generale[j]["MoyenGeneral"]
-#             list_moy_Generale[j]["MoyenGeneral"] = tmp
-#     list_moy_general.append(max)        
-    
-
-# liste_moy_general_croissant = []
-# for element in list_moy_general:
-#     for line in list_moy_Generale:
-#         if element == line["MoyenGeneral"]:
-#             liste_moy_general_croissant.append(line)
-#             break
-
-# for line in liste_moy_general_croissant:
-#     print(line)            
-
-# essayer d'afficher les invalides par line sans iteration
-# afficherUneInfo("GF34KHS",list_valides,list_invalides,list_note_valides,list_note_invalides)
 
 """ **********************************************************  """
             # Voici la partie Menu du projet
@@ -126,9 +98,9 @@ while menu in [1,2,3,4,5]:
         numero =input("Entrer votre numero svp")
         afficherUneInfo(numero,list_valides,list_invalides,list_note_valides,list_note_invalides)
     elif menu == 3:
-        print("En cours de traitement")   
-    elif menu == 4:
         print("En cours de traitement")
+    elif menu == 4:
+        ajouterInfo()
     elif menu == 5:
         print("En cours de traitement")
     else:
