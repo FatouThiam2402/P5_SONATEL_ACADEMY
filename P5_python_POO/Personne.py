@@ -57,7 +57,23 @@ class Eleve:
             return False     
 
 
+    def enleverspace(chaine):
+        ch=""
+        if chaine[0] != " ":
+            ch+=chaine[0]
+        for i in range(1,len(chaine)):
+            if (chaine[i-1] == " " and chaine[i]== " "):
+                continue
+            else:
+                ch+=chaine[i]
+        return ch
+            
+
     def changerFormatDate(self,date):
+
+        if date == "" or date == " ":
+            return False
+        Eleve.enleverspace(date)
         dateF =""
         listeMois =["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","decembre"]
         listeSep =[' ',',','-',';','_','/','.',':']
@@ -89,9 +105,11 @@ class Eleve:
         date = date.split("-")
         jour = int(date[0])
         mois = int(date[1])
-        annee = int(date[2])
+        annee = int(date[2]) 
+       
         try:
-            date = datetime.datetime(annee,mois,jour).strftime("%d-%m-%y")
+            date = datetime(annee,mois,jour).strftime("%d-%m-%y")
+            
         except:
             return False
         return True             
@@ -115,6 +133,13 @@ class Eleve:
             return False
 
     def noteValide(self,note):
+        note = note.replace("Science_Physique","PC")
+        note = note.replace("pc","PC")
+        note = note.replace("ANGLAIS","Anglais")
+        note = note.replace("FRANCAIS","Francais")
+        note = note.replace("Français","Francais")
+        note = note.replace("MATH","Math")
+
         matieresNotes = note.split("#")
         if matieresNotes[0] == '':
             del matieresNotes[0]
@@ -161,6 +186,10 @@ class Eleve:
         return listeMat
 
 
-print("c grave",Eleve.dateValide("self",Eleve.changerFormatDate("self","28/février/2003")))
 
+
+
+
+
+        
 

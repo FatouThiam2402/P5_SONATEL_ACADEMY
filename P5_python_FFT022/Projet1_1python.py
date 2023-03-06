@@ -26,7 +26,7 @@ def prenomValide(prenom):
     else:
         return False     
    
-#print(prenomValide("1de"))       
+      
 
 def nomValide(nom):
     nbre = 1
@@ -88,7 +88,7 @@ def dateValide(date):
     except:
         return False
     return True   
-print("c grave",dateValide(changerFormatDate("28/février/2003")))
+# print("c grave",dateValide(changerFormatDate("28/février/2003")))
 #print("verification",dateValide(changerFormatDate("29/mars/09")))
 
 def definirFormatClasse(classe):
@@ -170,7 +170,7 @@ def calculMoyenGeneral(listeMat):
     moyAnnuel = round(somMoyenMatieres/len(listeMat),2)
     return moyAnnuel
 
-#print("moyennn",calculMoyenGeneral(noteValide(note)))
+# print("moyennn",calculMoyenGeneral(noteValide(note)))
 
 def afficherInfoValides(list_valides):
     print(53*"-")

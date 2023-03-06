@@ -66,9 +66,19 @@ for row in list_note_valides:
     dict_moy_Generale = {"Numero":row["Numero"],"MoyenGeneral":MoyGeneralEtud}
     list_moy_Generale.append(dict_moy_Generale)
     dict_moy_Generale={}
-dict_moy_croissant = sorted(dict_moy_Generale , key=lambda d:d['MoyenGeneral'],reverse = True)
-for lin in dict_moy_croissant:
-    print(lin)
+
+# for line in  list_moy_Generale:
+#     print(line)
+
+# dict_moy_croissant = sorted(list_moy_Generale , key=lambda d:d['MoyenGeneral'],reverse = True)
+
+# j = 0
+# for i in range(1,len(dict_moy_croissant)):
+#     while j<6:
+#         print(dict_moy_croissant[i])
+#         j+=1
+
+
            
 
 # essayer d'afficher les invalides par line sans iteration
