@@ -46,20 +46,20 @@ elif choix == 2:
 elif choix == 3:
     liste_dict = []
     data_xml = open("data100code.xml","r") 
-    # liste_valide,liste_invalide = input_file_xml(data_xml) # erreur à revoir
+    liste_valide,liste_invalide = input_file_xml(data_xml) # erreur à revoir
 
-    # valide,invalide = choixFileValideInvalide()
-    # if valide == 1:
-    #     valide_en_csv(liste_valide)
-    # elif valide == 2:
-    #     valide_en_json(liste_valide)
-    # elif valide == 3:
-    #     valide_en_xml(liste_valide)
-    # if invalide == 1:
-    #     invalide_en_csv(liste_invalide)
-    # elif invalide == 2:    
-    #     invalide_en_json(liste_invalide)
-    # elif invalide == 3:    
-    #     invalide_en_xml(liste_invalide)
+    valide,invalide = choixFileValideInvalide()
+    if valide == 1:
+        valide_en_csv(liste_valide)
+    elif valide == 2:
+        valide_en_json(liste_valide)
+    elif valide == 3:
+        valide_en_xml(liste_valide)
+    if invalide == 1:
+        invalide_en_csv(liste_invalide)
+    elif invalide == 2:    
+        invalide_en_json(liste_invalide)
+    elif invalide == 3:    
+        invalide_en_xml(liste_invalide)
 
   

@@ -5,7 +5,7 @@ def numeroValide(chaine):
     if len(chaine) == 7:
         if chaine.isalnum() == True:
             if chaine.isupper() == True:
-                if any(c.isdigit()for c in chaine) == True:
+                if any(c.isdigit() for c in chaine) == True:
                     
                     return True
 
@@ -42,7 +42,8 @@ def nomValide(nom):
             return False
         
     else:
-        return False        
+        return False     
+       
 #print(nomValide("1ez"))        
 
 def changerFormatDate(date):
@@ -92,6 +93,7 @@ def dateValide(date):
 #print("verification",dateValide(changerFormatDate("29/mars/09")))
 
 def definirFormatClasse(classe):
+    
     cl =""
     if classe == "" or classe == " ":
         return False
@@ -159,7 +161,9 @@ def noteValide(note):
         elemtSub.append(moy)
         listeMat.append(elemtSub)
         elemtSub=[]    
+
     return listeMat
+
 
 #listemat,listemoyAnnuel = noteValide(note)
 def calculMoyenGeneral(listeMat):
@@ -179,6 +183,7 @@ def afficherInfoValides(list_valides):
     for line in list_valides:
         print("{:<8} {:<8} {:<10} {:<15} {:<10}".format(line["Numero"], line["Nom"],line["Prenom"], line["Date de naissance"], line["Classe"]))
     
+
 def afficherNoteValide(list_note_valides):
     print(60*"-")
     print('   Numéro\tNotes devoirs Examen Moyenne')

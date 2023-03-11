@@ -10,7 +10,7 @@ def numeroValide(chaine):
                     
                     return True
                 else:
-                    return False    
+                    return False   
 
                 
 
@@ -46,7 +46,7 @@ def nomValide(nom):
     else:
         return False        
 #print(nomValide("1ez"))        
-
+#######   REvoir la date psk ça marche plus  ###########
 def changerFormatDate(date):
     dateF =""
     listeMois =["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","decembre"]
@@ -75,13 +75,15 @@ def changerFormatDate(date):
          return False
 
 
-#print("test1",changerFormatDate("23/octobre/2000"))
+#print("test1",changerFormatDate("23/octobre/2o00"))
 
 
      
 # verification de la validité de la date
 def dateValide(date):
     date = date.split("-")
+    print("================================÷\n\n\n\n\n")
+    print(date)
     jour = int(date[0])
     mois = int(date[1])
     annee = int(date[2])
