@@ -1,0 +1,95 @@
+<!Doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title> TP2 JS</title>	
+		<link rel="stylesheet" type="text/css" href="style3.css">
+
+	<body>
+		
+			<div class="rectangle">
+					<button class="succes">Notification succes</button>
+					<button class="danger">Notification danger</button>
+					<button class="warning">Notification warning</button>
+					<button class="info">Notification info</button>
+				
+			</div>
+			<div class="mon_projet">
+				
+			</div>
+	
+	<script type="text/javascript">
+		const projet = document.querySelector(".mon_projet");
+		const bouton_succes = document.querySelector(".succes");
+		
+
+		bouton_succes.addEventListener("click",function(){
+			const paragraph =  document.createElement("p");
+			paragraph.textContent = "Mon Projet 4";
+			projet.appendChild(paragraph);
+			projet.style.backgroundColor = "green";
+
+			projet.style.display = "block";
+			setTimeout(function(){
+				projet.style.display = "none"
+			},1000)
+
+
+		})
+
+		const bouton_danger = document.querySelector(".danger");
+		
+
+		bouton_danger.addEventListener("click",function(){
+			const paragraph =  document.createElement("p");
+			paragraph.textContent = "Mon Projet 4";
+			projet.appendChild(paragraph);
+			projet.style.backgroundColor = "red";
+
+			projet.style.display = "block";
+			setTimeout(function(){
+				projet.style.display = "none"
+			},1000)
+
+
+		})
+
+		const bouton_warning = document.querySelector(".warning");
+		
+
+		bouton_warning.addEventListener("click",function(){
+			const paragraph =  document.createElement("p");
+			paragraph.textContent = "Mon Projet 4";
+			projet.appendChild(paragraph);
+			projet.style.backgroundColor = "yellow";
+
+			projet.style.display = "block";
+			setTimeout(function(){
+				projet.style.display = "none"
+			},1000)
+
+
+		})
+
+		const bouton_info = document.querySelector(".info");
+		
+
+		bouton_info.addEventListener("click",function(){
+			const paragraph =  document.createElement("p");
+			paragraph.textContent = "Mon Projet 4";
+			projet.appendChild(paragraph);
+			projet.style.backgroundColor = "aqua";
+
+			projet.style.display = "block";
+			setTimeout(function(){
+				projet.style.display = "none"
+			},1000)
+
+
+		})
+		
+		
+	</script>
+	</body>
+
+</html>
