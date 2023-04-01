@@ -1,24 +1,4 @@
-<!Doctype html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<title> TP2 JS</title>	
-		<link rel="stylesheet" type="text/css" href="style3.css">
 
-	<body>
-		
-			<div class="rectangle">
-					<button class="succes">Notification succes</button>
-					<button class="danger">Notification danger</button>
-					<button class="warning">Notification warning</button>
-					<button class="info">Notification info</button>
-				
-			</div>
-			<div class="mon_projet">
-				
-			</div>
-	
-	<script type="text/javascript">
 		const projet = document.querySelector(".mon_projet");
 		const bouton_succes = document.querySelector(".succes");
 		
@@ -89,7 +69,4 @@
 		})
 		
 		
-	</script>
-	</body>
-
-</html>
+	
