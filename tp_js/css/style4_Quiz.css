@@ -1,0 +1,62 @@
+
+
+h1{
+	margin-left: 20px;
+
+}
+
+label{
+	font-size: 20px;
+}
+
+button{
+	height: 50px;
+	width: 100%;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	background-color: #9d559d;
+	border-radius: 0px 0px 10px 10px;
+}
+
+form.question1{
+	margin-left: 30%;
+	width: 50%;
+	height: 150%;
+	background-color: white;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 10px 10px 10px 10px grey;
+}
+form.question2{
+	margin-left: 30%;
+	width: 50%;
+	height: 150%;
+	background-color: white;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 10px 10px 10px 10px grey;
+}
+form.question3{
+	margin-left: 30%;
+	width: 50%;
+	height: 150%;
+	background-color: white;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 10px 10px 10px 10px grey;
+}
+form.question4{
+	margin-left: 30%;
+	width: 50%;
+	height: 150%;
+	background-color: white;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 10px 10px 10px 10px grey;
+}
+form.question5{
+	margin-left: 30%;
+	width: 50%;
+	height: 150%;
+	background-color: white;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 10px 10px 10px 10px grey;
+}
+
