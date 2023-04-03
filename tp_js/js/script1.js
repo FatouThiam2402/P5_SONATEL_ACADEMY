@@ -1,24 +1,4 @@
-<!Doctype html>
-<html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<title> TP1 JS</title>	
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<!-- <script defer src="script.js" type="text/javascript"></script>
-		 -->
-
-	</head>
-	<body>
-		
-		<div id="contener" class="contener">
-			<button id="ajout" class="boutton">+Add note</button>
-
-			<div  id="contener1"> 
-				
-			</div>
-		</div>
-		
-		<script type="text/javascript">
+<script type="text/javascript">
 
 			/*function ajoutContener()
 			{*/
@@ -32,8 +12,8 @@
 					let img1 = document.createElement("img");
 					let img2 = document.createElement("img");
 
-					img1.src = "modifier.svg";
-					img2.src = "corbeille.svg";
+					img1.src = "../images/modifier.svg";
+					img2.src = "../images/corbeille.svg";
 					img1.alt = "modifier";
 					img2.alt = "corbeille";
 					img2.classList.add('id_image2');
@@ -53,7 +33,7 @@
 
 				});
 				img2.addEventListener('click',function(){
-						removeElement(cartes,carte);
+						removeChild(cartes,carte);
 					});
 
 
@@ -87,6 +67,3 @@
 
 
 		</script>
-			
-	</body>
-</html>

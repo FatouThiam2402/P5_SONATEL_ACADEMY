@@ -1,7 +1,7 @@
 const tab_questions = [
 
 	{
-		question: "Quel est le Meilleur Langage de Programmation en 2022",
+		question: "Quel est la Meilleur Langage de Programmation en 2022",
 		a: "Java",
 		b: "C",
 		c: "Python",
@@ -9,7 +9,7 @@ const tab_questions = [
 		correct: "d"
 	},
 	{
-		question: "Quel est le  Langage de Programmation le plus utilisé en 2023",
+		question: "Quel est la  Langage de Programmation le plus utilisé en 2023",
 		a: "Java",
 		b: "C",
 		c: "Python",
@@ -43,6 +43,7 @@ const tab_questions = [
 	];
 // Object.keys() donne les clés de l'objet
 // Object.keys(element)[0] affiche la premiere clé
+
 let i = 1;
 tab_questions.forEach(element =>{	
 	
@@ -55,7 +56,7 @@ tab_questions.forEach(element =>{
 	form.className = "question"+i;
 	form.appendChild(h1);
 	for(let j = 1; j < Object.keys(element).length -1; j += 1){
-			console.log(Object.keys(element)[j]);
+			
 			const input = document.createElement("input");
 			input.type = "radio"
 			input.name = "myRadio"
@@ -72,8 +73,10 @@ tab_questions.forEach(element =>{
 	form.appendChild(br);
 	const input = document.createElement("input");
 	const button = document.createElement("Button");
-	button.type = "submit";
+	button.type = "button";
 	button.textContent = "Suivant";
+	// ajouter une classe au niveau de chaque boutton suivant
+	button.className = "suivant"+ i;
 	
 	form.appendChild(button); 	
 	div_quiz.appendChild(form);
@@ -81,3 +84,60 @@ tab_questions.forEach(element =>{
 	
 
 });
+
+
+// afficher le premier formulaire et cacher les 4 suivant
+const form2 = document.querySelector(".question2");
+form2.style = "display:none;"
+const form3 = document.querySelector(".question3");
+form3.style = "display:none;"
+const form4 = document.querySelector(".question4");
+form4.style = "display:none;"
+const form5 = document.querySelector(".question5");
+form5.style = "display:none;"
+
+// je déclare une variable score
+var score = 0;
+// je recupère le boutton suivant1
+
+let suivant1 = document.querySelector(".suivant1");
+suivant1.addEventListener("click",function(){
+
+	const form_suiv = next_form();
+		form_suiv.style.display = "block";
+		console.log(form_suiv)
+
+});
+
+let suivant2 = document.querySelector(".suivant2");
+suivant2.addEventListener("click",function(){
+
+	const form_suiv = next_form();
+		form_suiv.style.display = "block";
+		console.log(form_suiv)
+
+});
+
+
+
+// fonction pour afficher le prochain formulaire
+function next_form(){
+	const les_forms = document.getElementsByTagName("form"); // recupèrer tous les forms
+	const form_actif = document.querySelector('form:not([style="display: none;"])');// recupère le form actif
+	form_actif.style.display = "none"; // désactiver le form actif
+
+	for (let i = 0; i < les_forms.length; i+=1){
+		if(les_forms[i] === form_actif){
+
+			console.log(form_actif);
+			
+		}
+		else{
+			return "vous avez terminer";
+		}
+		
+	}
+
+}
+
+
