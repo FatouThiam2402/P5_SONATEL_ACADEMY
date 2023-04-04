@@ -60,3 +60,23 @@ form.question5{
 	box-shadow: 10px 10px 10px 10px grey;
 }
 
+#score{
+	margin-left: 30%;
+	width: 50%;
+	height: 150%;
+	background-color: white;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 10px 10px 10px 10px grey;
+	
+
+}
+
+.input_rejouer{
+	height: 50px;
+	width: 100%;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	background-color: #9d559d;
+	border-radius: 0px 0px 10px 10px;
+}

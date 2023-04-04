@@ -1,0 +1,45 @@
+
+#idrebours{
+	position: absolute;
+	top: 200px;
+	margin-left: 450px;
+	color: white;
+	font-size: 50px;
+}
+.jours{
+	position: absolute;
+	color: white;
+	top: 280px;
+	margin-left: 560px;
+}
+.heurs{
+	position: absolute;
+	color: white;
+	top: 280px;
+	margin-left: 690px;
+
+}
+
+.minutes{
+	position: absolute;
+	color: white;
+	top: 280px;
+	margin-left: 810px;
+
+}
+
+.secondes{
+
+	position: absolute;
+	color: white;
+	top: 280px;
+	margin-left: 950px;
+}
+.annee{
+
+	position: absolute;
+	color: rgb(255, 255, 255,0.1);
+	top: 480px;
+	margin-left: 620px;
+	font-size: 150px;
+}
