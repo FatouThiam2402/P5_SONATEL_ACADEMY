@@ -1,0 +1,89 @@
+tbody{
+	background-image: url("sonatel_academy1.png");
+}
+
+#bgimage{
+position: absolute;
+	margin-left: 200px;
+}
+
+
+.lesTPs{
+	position: absolute;
+	top: 70px;
+	margin-left: 650px;
+}
+
+button{
+	border-color: skyblue;
+	background-color: skyblue;
+	
+}
+a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	font-size: 30px;
+}
+.monNom{
+	position: absolute;
+	top: -150px;
+	font-weight: bold;
+	margin-left: -300px;
+	font-size: 30px;
+	color: skyblue;
+
+}
+
+
+#bgimage1{
+
+	position: absolute;
+	top:5px;
+	margin-left: 1670px;
+}
+
+.left{
+	background-color: black;
+	border: solid;
+	left: 0px;
+	top: 10px;
+	width: 210px;
+	height: 1000px;
+	position: absolute;
+}
+.left img {
+	position: absolute;
+	border-radius: 10%;
+	top: 20px;
+	height: 80px;
+	width: 130px;
+	margin-left: 20px;
+}
+.options{
+	position: absolute;
+	top :150px;
+	color: white;
+	margin-left: 10px;
+}
+.htmlcss{
+	position: absolute;
+	top: 770px;
+	margin-left: 220px;
+	font-weight: bold;
+	font-size:20px;
+}
+
+.Sonatel_academie{
+
+	position: absolute;
+	top :800px;
+	color: white;
+	margin-left: 10px;
+}
+.dev_data{
+	position: absolute;
+	top :900px;
+	color: white;
+	margin-left: 10px;
+}

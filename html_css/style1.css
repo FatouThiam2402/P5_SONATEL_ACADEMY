@@ -1,0 +1,18 @@
+
+
+.souligner{
+	text-decoration: underline;
+	color: black;
+}
+
+
+div{
+	color: blue;
+}
+
+span{
+	color: blue;
+}
+.auteur{
+	font-style: italic;
+}

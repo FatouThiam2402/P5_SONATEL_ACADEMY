@@ -1,0 +1,126 @@
+body{
+	z-index: -1;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header{
+	background-color: #0d083a;
+	height: 170px;
+	width: 2250px;
+	margin-right: 20px;
+	margin-left: auto;
+	text-align: center;
+
+}
+#id_ioc{
+	font-weight: bold;
+	text-align:center ;
+	font-size: 50px;
+	color: white ;
+
+}
+#phrase{
+	color: white;
+	position: absolute;
+	top: 90px;
+	margin-left: 35%;
+}
+#button{
+	height: 5%;
+	width: 5%;
+	border: salmon;
+	background-color: purple;
+	top: 140px;
+	position: absolute;
+	font-size: 20px;
+	color: white;
+	border-radius:10%;
+	margin-left: -3%;
+}
+.texte{
+	top: 120px;
+	margin-left: 25%;
+}
+
+.icon{
+	background-color: rgba(39, 35, 35, 0.5);
+	width: 60px;
+  	height: 60px;
+	align-items: center;
+  font-size: 40px;
+  color: aliceblue;
+  margin-top: -70px;
+  margin-left: 20px;
+  border-radius: 5px;
+
+}
+
+.contener{
+	background-color: white;
+	width: 550px;
+	height: 600px;
+	margin-left: 800px;
+	margin-top: -70px;
+	z-index: 999;
+	position: fixed;
+	border-radius: 2%;
+
+}
+
+
+button{
+	
+	background-color: rgb(180, 8, 180);
+	color: white;
+	width: 70px;
+	height: 35px;
+	border-radius: 6px;
+}
+
+.signUp{
+	background-color: rgb(33, 5, 108);
+	width: 550px;
+	height: 60px;
+	top: 10px;
+
+
+}
+
+#signUpText{
+	color: rgb(255, 255, 255);
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 20px;
+	
+}
+
+/* .form{
+	
+	display: flex;
+	align-content: center;
+	align-items: center;
+	background: rgba(77, 77, 77, 0.7);
+	
+} */
+/* .from:target{
+	visibility: visible;
+	opacity: 1;
+} */ 
+.formcontent{
+	position: relative;
+	background: red;
+	width: 500px;
+	border-radius: 4px;
+	padding: 1em 2em;
+
+}
+.formulaire{
+	margin-left: 20px;
+	font-size: 20px;
+
+}
+input{
+	font-size: 18px;
+	width: 500px;
+	height: 40px;
+}

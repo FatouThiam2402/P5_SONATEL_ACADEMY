@@ -1,0 +1,73 @@
+.bgPrincipal{
+	background-color:moccasin;
+	height: 900px;
+	margin-right: 210px;
+	margin-left: 150px;
+
+}
+
+.bgRouge{
+	background-color: red;
+	border: solid;
+	border-color: purple;
+	text-align: center;
+	font-size: 50px;
+	margin-right: 100px;
+	margin-left: 200px;
+	height: 140px;
+	width: 900px;
+	font-weight: bold;
+
+
+}
+
+.bgagens{
+	background-color: orange;
+	border: solid;
+	color: blue;
+	height: 40px;
+	text-indent:20px;
+	margin-right: 140px;
+	margin-left: 50px;
+
+}
+
+.bginternis{
+	background-color: orange;
+	border: saddlebrown;
+	text-indent: 20px;
+	color: blue;
+	margin-left: 50px;
+	margin-right: 140px;
+}
+
+.bgex{
+	background-color: orange;
+	text-indent: 20px;
+	color: blue;
+	margin-right: 140px;
+	margin-left: 50px;
+}
+.bgest{
+	background-color: orange;
+	text-indent: 20px;
+	color: blue;
+	height: 40px;
+	border: solid;
+	margin-left: 50px;
+	margin-right: 140px;
+}
+.bguberi{
+	background-color: orange;
+	text-indent: 20px;
+	color: blue;
+	margin-right: 140px;
+	margin-left: 50px;
+}
+.firstCaractere::first-letter{
+	color: red;
+	font-size: 30px;
+	font-weight: bold;
+
+
+}
