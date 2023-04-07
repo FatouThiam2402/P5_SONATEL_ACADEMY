@@ -1,4 +1,4 @@
-const APIURL ="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=100";
+const APIURL ="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 const IMGPATH = "https://image.tmdb.org/t/p/w300";
 const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 
@@ -42,13 +42,24 @@ fetch(APIURL)
         films.appendChild(film);
         contener.appendChild(films);
 
-        var get_overview = document.getElementsByClassName("overview");
+    
 
-        var get_film = document.getElementsByClassName("film");
+        console.log(film);
+        console.log(div_overview)
+        film.addEventListener("mouseover",function(){
+            div_overview.style = "display:block";
+            
+        }); 
+
+        film.addEventListener("mouseout",function(){
+            div_overview.style = "display:none";
+            
+        }); 
 
     }
 
-    
+// affichage des Films
+
     dict_results.forEach ( element =>{
      
         affichage_films(element);
@@ -56,22 +67,12 @@ fetch(APIURL)
     });
 
 
-    /* console.log(get_overview);
-    get_film.addEventListener("mouseover",()=>{
-
-    });*/
-
-
- /*dict_results.forEach ( element =>{
-        element["original_title"].include(valeur_taper);
-        affichage_films(element);
-    })*/
-
+// rechercher un film
 
     const recherche = document.getElementById("button");
     recherche.addEventListener("input",() => {
         const valeur_taper = recherche.value.toLowerCase();
-          console.log(valeur_taper);
+         
           films.innerHTML =""
         dict_results.forEach(element =>{
           

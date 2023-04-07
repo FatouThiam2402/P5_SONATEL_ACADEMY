@@ -92,12 +92,15 @@ tab_questions.forEach(element =>{
 
 });
 // dans cette div on va ajoute le score et le boutton Rejouer
+
 var div_score = document.getElementById("score");
-console.log(div_score)
 const input = document.createElement("input");
+const h1 = document.createElement("h1");
+h1.className = "afficher_score"
 input.type = "button";
 input.value = "Rejouer";
 input.className = "input_rejouer"
+div_score.appendChild(h1);
 div_score.appendChild(input);
 
 
@@ -124,13 +127,10 @@ function next_form(){
 	for (let i = 0; i < les_forms.length; i+=1){
 		if(les_forms[i] === form_actif){
 
-			return les_forms[i+1] ;
+			return les_forms[i+1];
 			
 		}
-		else{
-			return "vous avez terminer";
-
-		}
+		
 		
 	}
 
@@ -151,7 +151,7 @@ function getKeyByValue(object, value) {
 
 
 // je déclare une variable score
-var score = 0;
+let score = 0;
 // je recupère le boutton suivant1
 // je recupere tous les boutton suivant
 let btn_suivants = document.getElementsByTagName("button");
@@ -167,46 +167,55 @@ for(let i = 1; i < btn_suivants.length+1; i+=1){
 				const key = getKeyByValue(tab_questions[i-1],les_choix[k].value);
 				if(key === tab_questions[i-1]["correct"]){
 					score = score + 1;
+
+
 				}
 			}
 
 		}
 	
 		form_actif.style.display = "none"; 
-		for (let j = 0; j < les_forms.length; j+=1){
+		for (let j = 0; j < les_forms.length-1; j+=1){
 			if(les_forms[j] === form_actif){
 
-				les_forms[j+1].style = "display:block" ;
-				
-			}
-			try{
-				les_forms.length == tab_questions.length
+				console.log("form suivant",les_forms[j+1]);
+				les_forms[j+1].setAttribute("style","display:block");
 
-			}catch(erreur){
-				console.log("c'est terminé",erreur.message);
+
 			}
 
+	
 
-
-
-			
 		}
+		
+
+		if( score === 0 || score === 1 || score === 2){
+			h1.textContent = "Désolé tu peux mieux faire tu as    "+score+"/"+les_forms.length
+		}
+
+		if(score === 3){
+			h1.textContent = " tu y es presque   "+score+"/"+les_forms.length
+		}
+		if(score === 4 || score === 5){
+			h1.textContent = "Bravo tu as assuré   "+score+"/"+les_forms.length
+		}
+		
+		const fin_suiv = document.querySelector(".suivant"+les_forms.length);
+		console.log("5",fin_suiv);
+
+		fin_suiv.addEventListener("click",function(){
+			div_score.style.display ="block";
+
+		})
+		
 
 	});
 
+	
 }
 
 
 
-
-/*
-let suivant1 = document.querySelector(".suivant1");
-suivant1.addEventListener("click",function(){
-
-	const form_suiv1 = next_form();
-		form_suiv1.style = "display:block";
-
-});*/
 
 // **************   pourquoi le deuxieme appel de la fonction next_form() ne marche pas  ça marche que sur le premier button suivant  **************** A Revoir *******
 

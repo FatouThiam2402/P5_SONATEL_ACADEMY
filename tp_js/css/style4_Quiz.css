@@ -80,3 +80,11 @@ form.question5{
 	background-color: #9d559d;
 	border-radius: 0px 0px 10px 10px;
 }
+
+#score{
+	
+	display: none;
+}
+.afficher_score{
+	color: black;
+}
